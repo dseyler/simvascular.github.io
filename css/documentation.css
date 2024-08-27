@@ -75,6 +75,11 @@ h4 {
     font-size: 20px;
 }
 
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width: 767px) {
     h1 {
         font-size: 7vw;
@@ -336,6 +341,17 @@ details summary::-webkit-details-marker {
         width: 100%;
     }
 }
+
+.bc_param_div {
+   background-color: #F0F0F0;
+   padding: 8px;
+   border: 1px solid #d0d0d0;
+   border-left: 1px solid #d0d0d0;
+   overflow-wrap: break-word;
+   white-space: pre-line;
+   font-size: 85%;
+}
+
 
 /*------------------------------------------ 
 
