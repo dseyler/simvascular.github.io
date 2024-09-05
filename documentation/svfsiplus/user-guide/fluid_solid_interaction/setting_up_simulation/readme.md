@@ -51,4 +51,4 @@ The “Simulation Parameters” panel allows specification of general parameters
 
 Finally, on the “Run Simulation” panel, click “Create Input File” to create the necessary files to run your simulation. If you wish to run with more than one processor, increase the slider accordingly. Finally, click “Run” to run your simulation.
 
-svFSIplus will create a directory called n-procs, where n is the number of MPI tasks for the simulation. This directory will contain .vtu files that with values of all requested fields, as well as a log file called history.dat and averages of various quantities over time.
+svFSIplus will create a directory called n-procs, where n is the number of MPI tasks for the simulation. This directory will contain .vtu files containing simulation results for all of the requested quantities, a history.dat file and averages of various quantities over time.

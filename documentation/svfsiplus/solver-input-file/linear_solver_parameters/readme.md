@@ -54,10 +54,10 @@ The value of <i>linear_solver_type</i> can be
 </div>
 
 <!-- --------------------------------- -->
-<!-- ----- Liner solver parameters --- -->
+<!-- ---- Linear solver parameters --- -->
 <!-- --------------------------------- -->
 
-<h4 id="liner_solver_parameters"> Liner Solver Parameters </h4>
+<h4 id="liner_solver_parameters"> Linear Solver Parameters </h4>
 <div class="bc_param_div">
 <strong>&lt;Max_iterations&gt;</strong> <i>integer</i> [5]  <nobr>
 <strong>&lt;/Max_iterations&gt;</strong>
