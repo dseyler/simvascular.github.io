@@ -46,7 +46,7 @@ The <strong>Add_equation</strong> keyword adds an equation of type <i>equation_t
 to the simulation. Multiple <strong>Add_equation</strong> keywords can be given
 within a solver parameters input file.
 
-The value of <i>equation_type</i> can be 
+The value of <i>equation_type</i> is a <i>string</i> identifying the equation type
 <ul style="list-style-type:disc;">
   <li> "advection_diffusion" - unsteady advection-diffusion   </li>
   <li> "cardiac_electro_physiology" - solves the mono-domain model of cardiac electrophysiology</li>
@@ -71,8 +71,7 @@ The value of <i>equation_type</i> can be
 <strong>&lt;Coupled&gt;</strong> <i>boolean [true]</i> <nobr>
 <strong>&lt;/Coupled&gt;</strong>
 </nobr><br>
-If <i>true</i> then the convergence of a multi-equation system of equations is coupled: nonlinear iterations are performed within each time step on all the coupled system of equations until convergence is achieved.  
-If <i>false</i> then the convergence of each equation is uncoupled and is achieved separately within each time step.
+If <i>true</i> then the convergence of a multi-equation system of equations is coupled: nonlinear iterations are performed within each time step on all the coupled system of equations until convergence is achieved. If <i>false</i> then the convergence of each equation is uncoupled and is achieved separately within each time step.
 <br>
 <strong>&lt;Initialize&gt;</strong> <i>string [none]</i> <nobr>
 <strong>&lt;/Initialize&gt;</strong>

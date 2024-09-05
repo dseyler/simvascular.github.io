@@ -1,3 +1,12 @@
+# Beta Version
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+The svFSIplus documentation is in a <b>Beta phase of release</b>. 
+
+The contents of the documentation is not finalized and could change in the future.
+
+Some sections of the documentation are incomplete and are actively being updated.
+</div>
+
 # Introduction 
 
 svFSIplus is an open-source, parallel, finite element multi-physics solver providing capabilities to simulate 
@@ -19,6 +28,8 @@ The following sections describe the solver modeling capabilities, input data and
 used to run a simulation.
 
 Documentation describing building, installing and testing svFSIplus can be found using the following links 
-<br> [Installing and building the solver](https://simvascular.github.io/svFSIplus/index.html)
-<br> [Testing Guide](https://simvascular.github.io/svFSIplus/index.html)
+<br> [Installing and building the solver](https://github.com/SimVascular/svFSIplus/blob/main/README.md)
+<br> [Testing Guide](https://github.com/SimVascular/svFSIplus/blob/main/tests/README.md)
+
+
 

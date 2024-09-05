@@ -2,7 +2,7 @@
 <!-- ==================== Boundary Condition Parameters ================ -->
 <!-- =================================================================== -->
 
-<h4 id="boundary_condition_parameters"> Boundary Condition Parameters </h4>
+<h3 id="boundary_condition_parameters"> Boundary Condition Parameters </h3>
 The Boundary Condition Parameters section of the solver parameters input file adds boundary conditions to a simulation.
 A boundary condition is set on a mesh face (surface) using a face name added to the simulation using the 
 &lt;<strong>Add_face</strong> parameter. 
@@ -27,13 +27,13 @@ The &lt;<strong>Add_BC</strong> name=<i>face_name</i>&gt; parameter adds a bound
 Some forms of boundary conditions only apply to certain equations.
 </div>
 
-<h5> Boundary condition types </h5>
+<h4> Boundary condition types </h4>
 <div style="background-color: #F0F0F0; padding: 8px; border: 1px solid #d0d0d0; border-left: 1px solid #d0d0d0">
 
-<h6 id="coupled_momemtum_bc"> Coupled momentum boundary condition </h6>
+<h5 id="coupled_momemtum_bc"> Coupled momentum boundary condition </h5>
 The coupled momentum boundary condition identifies the face to be treated using coupled momentum method.
 
-<h6 id="Dirichlet_bc"> Dirichlet boundary condition </h6>
+<h5 id="Dirichlet_bc"> Dirichlet boundary condition </h5>
 The Dirichlet boundary condition sets the values of a state variable on a face. A state variable
 refers to the unknown of the equation that is being solved for. For example, velocity is the state 
 variable for a fluid equation.
@@ -46,17 +46,17 @@ The following lists the state variable set for each type of equation
   <li> action_potential - cardiac_electro_physiology </li>
 </ul>
 
-<h6 id="Neumann_bc"> Neumann boundary condition </h6>
+<h5 id="Neumann_bc"> Neumann boundary condition </h5>
 The Neumann boundary condition imposes a normal force on the face.
 
-<h6 id="Robin_bc"> Robin boundary condition </h6>
+<h5 id="Robin_bc"> Robin boundary condition </h5>
 The Robin boundary condition applies a force to a face. The force is represented as a spring-mass-damper system.
 
-<h6 id="Traction_bc"> Traction boundary condition </h6>
+<h5 id="Traction_bc"> Traction boundary condition </h5>
 The Traction boundary condition applies a force on a face. The force can be along any direction.
 </div>
 
-<h5 id="temporal_spatial_distribution_bc"> Temporal and spatial values for boundary conditions </h5>
+<h4 id="temporal_spatial_distribution_bc"> Temporal and spatial values for boundary conditions </h4>
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 1px solid #d0d0d0">
 A spatial distribution of values is used for only Neumann or Traction boundary condition types to specify
 a spatially varying load (pressure/traction). The values are stored as nodal values for a face in a VTK VTP format file.
@@ -71,7 +71,7 @@ in a text file.
 
 <!-- ---------- G e n e r a l  P a r a m e t e r s ---------- -->
 <br>
-<h5> General Parameters </h5>
+<h4> General Parameters </h4>
 <div class="bc_param_div">
 <strong>&lt;Bct_file_path&gt;</strong> <i>string</i> [none]  <nobr> 
 <strong>&lt;/Bct_file_path&gt;</strong>
@@ -89,7 +89,7 @@ If <i>true</i> then normalize the spatial profile with the area of the face so t
 If <i>true</i> then used for applying a Dirichlet boundary condition on the displacement degrees of freedom when velocity is the state variable (e.g. fluid, CMM, FSI).
 <br>
 <section id="bc_Initial_displacements_file_path">
-<strong>&lt;Initial_displacements_file_path&gt;</strong> <i>string</i> [<i>none/]  <nobr> 
+<strong>&lt;Initial_displacements_file_path&gt;</strong> <i>string</i> [<i>none</i>]  <nobr> 
 <strong>&lt;/Initial_displacements_file_path&gt;</strong>
 </nobr><br>
 Use the VTK VTU-format file to initialize CMM using an inflation method resulting from a diastolic or time-averaged fluid traction.
@@ -178,7 +178,7 @@ The value of the state variable.
 
 <!-- ---------- R C R  P a r a m e t e r s ---------- -->
 
-<h5 id="rcr_boundary_condition_parameters"> RCR Boundary Condition Parameters </h5>
+<h4 id="rcr_boundary_condition_parameters"> RCR Boundary Condition Parameters </h4>
 <div class="bc_param_div">
 <strong>&lt;RCR_values&gt;</strong><br>
 <strong>&lt;Capacitance&gt;</strong> <i>real</i> <nobr> 
@@ -211,7 +211,7 @@ Proximal resistance.
 
 <!-- ---------- D i r i ch l e t  P a r a m e t e r s ---------- -->
 
-<h5> Dirichlet Boundary Condition Parameters </h5>
+<h4> Dirichlet Boundary Condition Parameters </h4>
 <div class="bc_param_div">
 <strong>&lt;Effective_direction&gt;</strong> vector [none]  <nobr> 
 <strong>&lt;/Effective_direction&gt;</strong>
@@ -242,7 +242,7 @@ If <i>true</i> then the solver will zero out the nodes shared by two adjacent fa
 
 <!-- ---------- N e u m a n n  P a r a m e t e r s ---------- -->
 
-<h5> Neumann Boundary Condition Parameters </h5>
+<h4> Neumann Boundary Condition Parameters </h4>
 <div class="bc_param_div">
 <strong>&lt;Distal_pressure&gt;</strong> real [0.0]  <nobr> 
 <strong>&lt;/Distal_pressure&gt;</strong>
@@ -268,7 +268,7 @@ If <i>true</i> then mimic clamped condition on a specimen routinely done in expe
 
 <!-- ---------- R o b i n  P a r a m e t e r s ---------- -->
 
-<h5> Robin Boundary Condition Parameters </h5>
+<h4> Robin Boundary Condition Parameters </h4>
 <div class="bc_param_div">
 <strong>&lt;Apply_along_normal_direction&gt;</strong> <i>boolean [false]</i> <nobr> 
 <strong>&lt;/Apply_along_normal_direction&gt;</strong>

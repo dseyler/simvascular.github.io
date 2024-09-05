@@ -1,6 +1,6 @@
 ## Basic GUI plugin use
 
-The plugin provides a GUI with which to create input files for your svFSI simulation using SimVascular. In this section, we will describe how to set up a fluid-structure interaction simulation of flow in a thick-walled blood vessel. For simplicity in presentation, we assume that the vessel has only one inlet and outlet. Before setting up a fluid-structure interaction job, one should have a mesh for the fluid domain and a mesh for the annulus (artery wall) domain as described above. We have provided you with an example meshes for the fluid domain of a cylinder and the solid domain of the cylinder.
+The plugin provides a GUI with which to create input files for your svFSIplus simulation using SimVascular. In this section, we will describe how to set up a fluid-structure interaction simulation of flow in a thick-walled blood vessel. For simplicity in presentation, we assume that the vessel has only one inlet and outlet. Before setting up a fluid-structure interaction job, one should have a mesh for the fluid domain and a mesh for the annulus (artery wall) domain as described above. We have provided you with an example meshes for the fluid domain of a cylinder and the solid domain of the cylinder.
 
 Initiate a job by pressing “New Job.” Click the job in the SV Data Manager, and ensure that it appears in the plugin window. The “Domains” panel allows one to add meshes to the simulation for the different physical domains. Click “Add Mesh-Complete” and select the fluid mesh. You should see three faces appear, one for in the inlet, outlet and fluid-solid interface. Ensure that the button for “fluid” is selected.
 
@@ -51,4 +51,4 @@ The “Simulation Parameters” panel allows specification of general parameters
 
 Finally, on the “Run Simulation” panel, click “Create Input File” to create the necessary files to run your simulation. If you wish to run with more than one processor, increase the slider accordingly. Finally, click “Run” to run your simulation.
 
-svFSI will create a directory called n-procs, where n is the number of MPI tasks for the simulation. This directory will contain .vtu files that with values of all requested fields, as well as a log file called history.dat and averages of various quantities over time.
+svFSIplus will create a directory called n-procs, where n is the number of MPI tasks for the simulation. This directory will contain .vtu files that with values of all requested fields, as well as a log file called history.dat and averages of various quantities over time.

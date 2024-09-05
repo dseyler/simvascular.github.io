@@ -90,7 +90,7 @@ performed after the last time step of the simulation using VTU files written dur
 Indicates how often to save restart files.
 <br>
 <section id="gen_Restart_file_name">
-<strong>&lt;Restart_file_name&gt;</strong> <i>string [stFile.bin]</i> <nobr>
+<strong>&lt;Restart_file_name&gt;</strong> <i>string</i> [stFile.bin] <nobr>
 <strong>&lt;/Restart_file_name&gt;</strong>
 </nobr><br>
 Name of the file used to store simulation state data. This file is used for restarting simulations.

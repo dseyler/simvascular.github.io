@@ -125,13 +125,17 @@ The parameter input file is organized into six sections used to provide context 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
 The parameter input XML file must start with the following two lines
 
+<pre>
 &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
 <br>
 &lt;svFSIFile version="0.1"&gt;
+</pre>
 
 and end with the single line
 
+<pre>
 &lt;/svFSIFile&gt;
+</pre>
 
 where 
 
