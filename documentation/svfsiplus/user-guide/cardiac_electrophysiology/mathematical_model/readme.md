@@ -32,7 +32,7 @@ $$ \mathbf{\sigma} = \sigma_f \mathbf{f}\otimes \mathbf{f} + \sigma_s (\mathbf{I
 
 where $\sigma\_f$ and $\sigma\_s$ are the conductivities along the fiber direction and in the transverse plane. $\mathbf{f}$ is the fiber direction vector.
 
-In <strong>svFSI</strong>, we directly specify $\mathbf{D}$ in the input file. We choose a slightly different form to enforce the transverse isotropy of the conductivity tensor,
+In <strong>svFSIplus</strong>, we directly specify $\mathbf{D}$ in the input file. We choose a slightly different form to enforce the transverse isotropy of the conductivity tensor,
 
 $$ \mathbf{D} = D\_{iso}\mathbf{I} + \sum\_{n=1}^{nsd}D\_{ani,n}\mathbf{fN}\_n\otimes\mathbf{fN}\_n $$
 
@@ -47,7 +47,7 @@ Depending on how the depolarization and repolarization within a single cardiac m
 
 <h5> Biophysics-based ionic models </h5>
 
-Between cardiac myocytes, the propagation of the electrical signal is enabled by the transmembrane motion of different ions, such as $K^+$, $Na^+$ and $Ca^{2+}$ during depolarization and repolarization of the myocytes. Cellular biophysics-based activation models are designed to capture these ionic movements. One of the popular biophysics-based ionic models, the TTP model <a href="#ref-3">[3]</a> is implemented in <strong>svFSI</strong>. Here, we will briefly illustrate the ionic currents involved in the TTP model.
+Between cardiac myocytes, the propagation of the electrical signal is enabled by the transmembrane motion of different ions, such as $K^+$, $Na^+$ and $Ca^{2+}$ during depolarization and repolarization of the myocytes. Cellular biophysics-based activation models are designed to capture these ionic movements. One of the popular biophysics-based ionic models, the TTP model <a href="#ref-3">[3]</a> is implemented in <strong>svFSIplus</strong>. Here, we will briefly illustrate the ionic currents involved in the TTP model.
 
 In the TTP model, the ionic current is expressed as
 
@@ -68,7 +68,7 @@ Since, intracellular calcium concentration is the driving factor behind excitati
 
 Sarcoplasmic reticulum (SR) is a membrane structure within the muscle cell, whose main function is to store $Ca^{2+}$. Dyadic space is the region bounded by the T-tubule and SR. $Ca^{2+}$ ions are considered buffered if they are bound to negatively charged proteins (called buffers). Otherwise they are considered free. The action potential transmitted through the gap junction cause the current myocyte to depolarize. The depolarization opens the L-type (long-lasting) Ca channel located on the surface membrane. A small amount of $Ca^{2+}$ enters the myocyte due to potential, leading to a sharp increase of $Ca^{2+}$ in the dyadic space, which is a small region. This increase triggers the SR to release a large amount of $Ca^{2+}$ (calcium-induced calcium release) to enable the excitation-contraction. During diastole, calcium is removed from the cytoplasm through two ways. Ca is pumped (1) back into the SR and (2) out of the cell, mainly by the sodium-calcium exchange (NCX).
 
-For the TTP model in <strong>svFSI</strong>, the following units have to be used: time in [ms], length [mm], amount of substance [mmol], voltage [mV]. Mass can be in [g].
+For the TTP model in <strong>svFSIplus</strong>, the following units have to be used: time in [ms], length [mm], amount of substance [mmol], voltage [mV]. Mass can be in [g].
 
 <figure>
   <img class="svImg svImgMd" src="/documentation/svfsi/cep/imgs/Calcium.png">
@@ -119,7 +119,7 @@ Another class of phenomenological models exists that include additional variable
 
 <h5> Activation models available </h5>
 
-The following table provides a summary of all the available electrophysiology models in <strong>svFSI</strong>.
+The following table provides a summary of all the available electrophysiology models in <strong>svFSIplus</strong>.
 
   <table class="table table-bordered">
     <caption>Available cardiac electrophysiology models.</caption>

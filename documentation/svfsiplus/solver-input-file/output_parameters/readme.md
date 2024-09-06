@@ -2,7 +2,7 @@
 <!-- ==================== Output Subsection ======================= -->
 <!-- ============================================================== -->
 
-<h4 id="output_parameters"> Output Subsection </h4>
+<h3 id="output_parameters"> Output Subsection </h3>
 The <i>Output Subsection</i> section of the <i>Equation Section</i> defines the quantities written to simulation
 results files.
 
@@ -54,15 +54,11 @@ Below is a list of all quantity names available for output for the corresponding
 </ul>
 
 
-<h5> Example </h5>
+<h4> Example </h4>
 <div class="bc_param_div">
 &lt;<strong>Output</strong> type="Spatial"&gt;
 &lt;<strong>Displacement&gt;</strong> <i>true</i> &lt;/<strong>Displacement</strong>&gt;
 &lt;<strong>Stress&gt;</strong> <i>true</i> &lt;/<strong>Stress</strong>&gt;
 &lt;<strong>Output</strong>&gt;
 </div>
-
-
-
-
 
