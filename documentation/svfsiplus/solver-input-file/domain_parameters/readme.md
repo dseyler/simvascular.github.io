@@ -361,7 +361,7 @@ with the first error estimate calculated.
 </nobr><br>
 The density property for a solid.
 <br>
-<strong>&lt;Solid_viscosity&gt;</strong> <i>real</i> [0.9] <nobr>
+<strong>&lt;Solid_viscosity&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Solid_viscosity&gt;</strong>
 </nobr><br>
 The viscosity property for a solid.
