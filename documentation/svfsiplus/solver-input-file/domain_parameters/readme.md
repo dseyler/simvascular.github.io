@@ -150,7 +150,6 @@ linear elasticity, structural or structural velocity pressure parameters.
 <a href="#domain_Force_y"> Force_y <a>
 <a href="#domain_Force_z"> Force_z <a>
 <a href="#domain_Poisson_ratio"> Poisson_ratio <a>
-<a href="#viscosity_parameters"> Viscosity <a>
 </pre>
 
 <!-- ---------- structural_velocity_pressure domain Parameters ---------- -->
@@ -164,7 +163,6 @@ linear elasticity, structural or structural velocity pressure parameters.
 <a href="#domain_Force_z"> Force_z <a>
 <a href="#domain_Momentum_stabilization_coefficient"> Momentum_stabilization_coefficient <a>
 <a href="#domain_Poisson_ratio"> Poisson_ratio <a>
-<a href="#viscosity_parameters"> Viscosity <a>
 </pre>
 </pre>
 
@@ -360,11 +358,6 @@ with the first error estimate calculated.
 <strong>&lt;/Solid_density&gt;</strong>
 </nobr><br>
 The density property for a solid.
-<br>
-<strong>&lt;Solid_viscosity&gt;</strong> <i>real</i> [0.0] <nobr>
-<strong>&lt;/Solid_viscosity&gt;</strong>
-</nobr><br>
-The viscosity property for a solid.
 <br>
 <strong>&lt;Source_term&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Source_term&gt;</strong>

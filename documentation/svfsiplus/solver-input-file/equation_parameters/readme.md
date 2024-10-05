@@ -119,7 +119,7 @@ If <i>true</i> then use a Taylor-Hood element pair for increased stability.
 
 <h4 id="viscosity_parameters"> Viscosity Subsection </h4>
 The <i>Viscosity Subsection</i> of the <i>Equation Section</i> or <i>Domain Subsection</i> defines 
-the parameters for the viscosity model used by fluid and stokes equations. 
+the parameters for the fluid viscosity model used by fluid, CMM, and stokes equations, or the solid viscosity model used by struct and ustruct.
 
 The <i>Viscosity Subsection</i> is organized as follows
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 1px solid #d0d0d0">
@@ -132,7 +132,7 @@ The <i>Viscosity Subsection</i> is organized as follows
 
 The <strong>Viscosity</strong> keyword defines a subsection for viscosity parameters.
 
-The value of <i>viscosity_model</i> can be
+For fluid, CMM, and stokes equations, the value of <i>viscosity_model</i> can be
 
 <ul style="list-style-type:disc;">
  <li> "newtonian" - Newtonian viscosity model </li>
@@ -208,6 +208,41 @@ The value of the low shear rate threshold parameter.
 <strong>&lt;/Yield_stress_parameter&gt;</strong>
 </nobr><br>
 The value of the yield stress parameter.
+<br>
+&lt;<strong>/Viscosity</strong>&gt;
+</div>
+
+For struct and ustruct equations, the value of <i>viscosity_model</i> can be
+
+<ul style="list-style-type:disc;">
+ <li> "Newtonian" - Newtonian viscosity model </li>
+ <li> "Potential" - Pseudo-potential viscosity model </li>
+</ul>
+
+<!-- ---------- Newtonian ---------- -->
+
+<h5> Newtonian </h5>
+<div class="bc_param_div">
+&lt;<strong>Viscosity</strong> model="Newtonian"&gt;
+<br>
+<strong>&lt;Value&gt;</strong> <i>real</i> <nobr>
+<strong>&lt;/Value&gt;</strong>
+</nobr><br>
+The value of the viscosity constant. 
+<br>
+&lt;<strong>/Viscosity</strong>&gt;
+</div>
+
+<!-- ---------- Potential ---------- -->
+
+<h5> Potential </h5>
+<div class="bc_param_div">
+&lt;<strong>Viscosity</strong> model="Potential"&gt;
+<br>
+<strong>&lt;Value&gt;</strong> <i>real</i> <nobr>
+<strong>&lt;/Value&gt;</strong>
+</nobr><br>
+The value of the viscosity constant. 
 <br>
 &lt;<strong>/Viscosity</strong>&gt;
 </div>
