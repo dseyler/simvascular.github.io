@@ -507,7 +507,9 @@ Distribute domain properties
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
 Distribute material properties [ <a href="https://github.com/SimVascular/svFSIplus/blob/main/Code/Source/svFSI/distribute.cpp#L1063"> dist_mat_consts</a> ]
 
-Distribute viscosity model properties [ <a href="https://github.com/SimVascular/svFSIplus/blob/main/Code/Source/svFSI/distribute.cpp#L1069"> dist_visc_model </a> ]
+Distribute fluid viscosity model properties [ <a href="https://github.com/SimVascular/svFSIplus/blob/f754c50ee0c8fbea28556d61b35da1f24a2df72a/Code/Source/svFSI/distribute.cpp#L1070"> dist_fluid_visc_model </a> ]
+
+Distribute solid viscosity model properties [ <a href="https://github.com/SimVascular/svFSIplus/blob/f754c50ee0c8fbea28556d61b35da1f24a2df72a/Code/Source/svFSI/distribute.cpp#L1064"> dist_solid_visc_model </a> ]
 </div> 
 
 Distribute cardiac electromechanics parameters<br>
