@@ -63,6 +63,14 @@ cmake --build .
 </details>
 <br/>
 
+## Blocks
+
+The modular architecture of svZeroDSolver relies on "blocks", such as blood vessels, junctions, valves, boundary conditions, etc. Users can assemble and connect these blocks together in a variety of ways to create extensive and customizable 0D circulation models.   
+
+An overview of all currently implemented blocks can be found [here](https://simvascular.github.io/svZeroDSolver/class_block.html). This collection of building blocks allows to model extensive and complex vascular networks. Many examples of vascular networks can be found [here](https://github.com/simvascular/svZeroDSolver/tree/master/tests/cases). The assembly of these blocks is specified in the `.json` configuration file. The user guide below provides details.
+
+We are always interested in adding new blocks to expand the funcitonality of svZeroDSolver. For developers interested in contributing, please read the [Developer Guide](https://simvascular.github.io/svZeroDSolver/developer_guide.html). 
+
 ## svZeroDSolver - Quick User Guide
 
 svZeroDSolver can be used to run zero-dimensional (0D) cardiovascular
@@ -347,7 +355,6 @@ When the outputs are written in the variable-based and vessel-based forms, the u
 
 The number of timesteps between each time the output is written is specified by `output_interval`. By default, output is written at every time step.
 
-
 ## svZeroDCalibrator - Quick User Guide
 
 svZeroDCalibrator can be used to calibrate cardiovascular 0D models (i.e. infer optimal
@@ -434,9 +441,9 @@ We solve the differential-algebraic system implicitly in time, using the general
 ## Assembly
 Similar to a finite element solver, the 0D solver defines local element contributions to the (sparse) [global system](https://simvascular.github.io/svZeroDSolver/class_sparse_system.html#details). The solver automatically assembles the local contributions into the global arrays. The local elements are referred to as blocks.
 
-## Blocks
-An overview of all currently implemented blocks can be found [here](https://simvascular.github.io/svZeroDSolver/class_block.html). This collection of building blocks allows to model extensive and complex vascular networks. Many examples of vascular networks can be found [here](https://github.com/simvascular/svZeroDSolver/tree/master/tests/cases).
-<!-- Todo: write and add link to Doxygen guide on adding new blocks here-->
+## Developer guide
+
+If you are a developer and want to contribute to svZeroDSolver, you can find more helpful information in our [Developer Guide](https://simvascular.github.io/svZeroDSolver/developer_guide.html).
 
 ## References
 Relevant literature can be found [here](https://simvascular.github.io/svZeroDSolver/citelist.html).
