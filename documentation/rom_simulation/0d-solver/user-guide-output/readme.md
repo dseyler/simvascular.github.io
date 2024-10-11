@@ -10,9 +10,11 @@ If `output_variable_based` is set to `true`, the CSV file will contain all the d
 
 The degrees-of-freedom (DOFs) follow the following naming scheme:
 
-- Flow DOFs are labelled `flow:<name_of_upstream_block>:<name_of_downstream_block>`.
-- Pressure DOFs are labelled `pressure:<name_of_upstream_block>:<name_of_downstream_block>`.
-- Internal DOFs (i.e., variables internal to a block and not connected to upstream/downstream blocks) are labelled `<variable_name>:<block_name>`. The internal variables for each block are listed in the blocks' [class documentation](https://simvascular.github.io/svZeroDSolver/annotated.html).
+<ul style="list-style-type:disc;">
+<li> Flow DOFs are labelled <code>flow:&lt;name_of_upstream_block&gt;:&lt;name_of_downstream_block&gt;</code>. </li>
+<li> Pressure DOFs are labelled <code>pressure:&lt;name_of_upstream_block&gt;:&lt;name_of_downstream_block&gt;</code>. </li>
+<li> Internal DOFs (i.e., variables internal to a block and not connected to upstream/downstream blocks) are labelled <code>&lt;variable_name&gt;:&lt;block_name&gt;</code>. The internal variables for each block are listed in the blocks' [class documentation](https://simvascular.github.io/svZeroDSolver/annotated.html). </li>
+</ul>
 
 When the outputs are written in the variable-based and vessel-based forms, the user can specify whether they want outputs written for all cardiac cycles or just the last cardiac cycle using the `output_all_cycles` option. By default, only the last cycle is written. This makes the simulation more efficient.
 

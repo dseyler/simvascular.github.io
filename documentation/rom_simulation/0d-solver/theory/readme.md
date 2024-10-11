@@ -10,13 +10,14 @@ where $\mathbf{y}^e \in \mathbb{R}^{N_d^e}$ is the vector of unknown degrees-of-
 
 The governing equations for each block in svZeroDSolver, along with the corresponding electric circuit representation, can be found within their respective documentation pages. An overview of all the blocks is available [here](https://simvascular.github.io/svZeroDSolver/class_block.html). Below are the documentation pages for a few important blocks:
 
-* [Blood vessel](https://simvascular.github.io/svZeroDSolver/class_blood_vessel.html)
-* [Junction](https://simvascular.github.io/svZeroDSolver/class_junction.html)
-* [Windkessel/RCR boundary condition](https://simvascular.github.io/svZeroDSolver/class_windkessel_b_c.html)
-* [Coronary boundary condition](https://simvascular.github.io/svZeroDSolver/class_open_loop_coronary_b_c.html)
-* [Cardiac chamber](https://simvascular.github.io/svZeroDSolver/class_chamber_elastance_inductor.html)
-* [Valve](https://simvascular.github.io/svZeroDSolver/class_valve_tanh.html)
-
+<ul style="list-style-type:disc;">
+<li> <a href="https://simvascular.github.io/svZeroDSolver/class_blood_vessel.html"> Blood vessel </a> </li>
+<li> <a href="https://simvascular.github.io/svZeroDSolver/class_junction.html"> Junction </a> </li>
+<li> <a href="https://simvascular.github.io/svZeroDSolver/class_windkessel_b_c.html"> Windkessel/RCR boundary condition </a> </li>
+<li> <a href="https://simvascular.github.io/svZeroDSolver/class_open_loop_coronary_b_c.html"> Coronary boundary condition </a> </li>
+<li> <a href="https://simvascular.github.io/svZeroDSolver/class_chamber_elastance_inductor.html"> Cardiac chamber </a> </li>
+<li> <a href="https://simvascular.github.io/svZeroDSolver/class_valve_tanh.html"> Valve </a> </li>
+</ul>
 svZeroDSolver uses the `.json` configuration file described in the user guide to assemble the governing equations for each block (written in the form above), and the connectivity amongst the blocks, into a global set of governing equations. This is done in a similar manner to a finite element solver, where the global assembly is based on the local contributions of each block via their corresponding $\textbf{E}^e$, $\textbf{F}^e$ and $\textbf{c}^e$ matrices/vectors. 
 
 The global governing equation is given by:
