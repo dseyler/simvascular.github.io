@@ -16,44 +16,6 @@ interactively select nodes to view simulation results.
 drawing the network on an easy-to-use GUI. This provides an alternative to manually
 creating files and is useful for users without access to a 3D model.
 
-## Installation
-
-svZeroDSolver can be installed in two different ways. For using the Python API, an installation via pip is recommended.
-
-### Using pip
-
-For a pip installation, simply run the following command
-(cloning of the repository is not required):
-
-```bash
-pip install git+https://github.com/simvascular/svZeroDSolver.git
-```
-
-### Using CMake
-
-If you want to build svZeroDSolver manually from source, clone the repository
-and run the following commands from the top directory of the project:
-
-```bash
-mkdir Release
-cd Release
-cmake -DCMAKE_BUILD_TYPE=Release ..
-cmake --build .
-```
-<br/>
-<details>
-  <summary><mark><b>Note: Building on Sherlock for Stanford users</b></mark></summary>
-
-```bash
-module load cmake/3.23.1 gcc/14.2.0 binutils/2.38
-mkdir Release
-cd Release
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=/share/software/user/open/gcc/14.2.0/bin/g++ -DCMAKE_C_COMPILER=/share/software/user/open/gcc/14.2.0/bin/gcc ..
-cmake --build .
-```
-</details>
-<br/>
-
 ## Blocks
 
 The modular architecture of svZeroDSolver relies on "blocks", such as blood vessels, junctions, valves, boundary conditions, etc. Users can assemble and connect these blocks together in a variety of ways to create extensive and customizable 0D circulation models.   
@@ -67,6 +29,6 @@ The main categories of blocks implemented in svZeroDSolver are:
   <li>Heart valves</li>
 </ul>
 
-An overview of all currently implemented blocks can be found [here](https://simvascular.github.io/svZeroDSolver/class_block.html). This collection of building blocks allows to model extensive and complex vascular networks. Many examples of vascular networks can be found [here](https://github.com/simvascular/svZeroDSolver/tree/master/tests/cases). The assembly of these blocks is specified in the `.json` configuration file. The user guide below provides details.
+An overview of all currently implemented blocks can be found [here](https://simvascular.github.io/svZeroDSolver/class_block.html). This collection of building blocks allows to model extensive and complex vascular networks. Many examples of vascular networks can be found [here](https://github.com/simvascular/svZeroDSolver/tree/master/tests/cases). The assembly of these blocks is specified in the `.json` configuration file. The <a href="#0d-solver-user-guide">User Guide</a> below provides details.
 
 We are always interested in adding new blocks to expand the funcitonality of svZeroDSolver. For developers interested in contributing, please read the [Developer Guide](https://simvascular.github.io/svZeroDSolver/developer_guide.html). 

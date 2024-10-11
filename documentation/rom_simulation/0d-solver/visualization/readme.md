@@ -5,12 +5,6 @@
 svZeroDVisualization is a web application designed for visualizing 0D simulation results and the 0D network. It allows users to interactively explore and analyze their simulation data through an intuitive interface.
 This application is available in the  `applications` folder.
 
-
-### Architecture
-svZeroDVisualization is built using a robust architecture that includes:
-- Frontend: Utilizes HTML, CSS, Dash, and Plotly for creating a dynamic and interactive user interface. This setup allows for effective visualization and interaction with the 0D network and simulation results.
-- Backend: Powered by a Flask application that handles the server-side logic. It leverages NetworkX for managing and visualizing the network graph and a Python code to determine network connections.
-
 ### Installing Dependencies
 
 1. We recommend using a virtual environment to help manage project-specific

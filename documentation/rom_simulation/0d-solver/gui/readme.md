@@ -14,17 +14,6 @@ boundary conditions. This application is especially valuable for users who lack 
 3D models or seek an efficient alternative to manual file generation, making the model creation
 process both faster and more user-friendly.
 
-### Architecture
-
-svZeroDGUI is built using a robust architecture that includes:
-* Frontend: The frontend is developed with HTML, CSS, and JavaScript to create a
-responsive and user-friendly interface. It utilizes Cytoscape.js, a popular package for creating
-interactive elements and graphical networks.
-
-*  Backend: Flask app, Node.js for server-side logic, and Cypress for testing.
-This architecture supports an intuitive user experience for
-generating and managing 0D input files through a graphical interface.
-
 ### How to Use
 1. Create a virtual environment with the required `flask` dependency. If using `conda`, use the below commands:
     ```bash
