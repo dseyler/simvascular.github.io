@@ -2,7 +2,7 @@
 
 Flow rate, pressure, and other hemodynamic quantities in 0D models of vascular anatomies are governed by a system of nonlinear differential-algebraic equations (DAEs). In svZeroDSolver, the governing equations for a full 0D model are based on the governing equations for the individual blocks that make up the model.
 
-### Governing equations
+### Governing Equations
 
 For each block, with $N_d^e$ degrees-of-freedom and $N_e^e$ governing equations, we represent its governing equations as the following DAE: 
 $$\mathbf{E}^e(\boldsymbol{\alpha}^e) \cdot \dot{\mathbf{y}}^e + \mathbf{F}^e(\boldsymbol{\alpha}^e) \cdot \mathbf{y}^e + \mathbf{c}^e(\mathbf{y}^e,\dot{\mathbf{y}}^e, t) = \mathbf{0},$$
@@ -23,7 +23,7 @@ The global governing equation is given by:
 $$\mathbf{r}(\boldsymbol{\alpha}, \mathbf{y},\dot{\mathbf{y}}, t) = \mathbf{E}(\boldsymbol{\alpha}) \cdot \dot{\mathbf{y}} + \mathbf{F}(\boldsymbol{\alpha}) \cdot \mathbf{y} + \mathbf{c}(\mathbf{y},\dot{\mathbf{y}}, t) = \mathbf{0}, $$
 where $\mathbf{r},\mathbf{y},\mathbf{c} \in \mathbb{R}^{N}$ and $\textbf{E},\textbf{F} \in \mathbb{R}^{N \times N}$. Here, $\mathbf{r}$ is the residual, $\mathbf{y}$ is the vector of solution quantities and $\dot{\mathbf{y}}$ is its time derivative. Note that the solution quantities are generally the pressure and flow at each node between blocks, as well as state variables internal to each block. $N$ is the total number of equations and the total number of global unknowns. 
 
-The DAE system is solved implicitly using the generalized-$\alpha$ method (<a href="#0d-Jansen2000">Jansen, et al., 2000</a>). A description of this is provided in the "Time integration" section of this documentation. We then use the Newton-Raphson method to iteratively solve
+The DAE system is solved implicitly using the generalized-$\alpha$ method (<a href="#0d-Jansen2000">Jansen, et al., 2000</a>). A description of this is provided in the <a href="#time-integration">Time Integration</a> section of this documentation. We then use the Newton-Raphson method to iteratively solve
 $$\mathbf{K}^{i} \cdot \Delta\dot{\mathbf{y}}^{i} = - \mathbf{r}^{i}$$
 with solution increment $\Delta\dot{\mathbf{y}}^{i}$ in iteration $i$. The linearization of the time-discretized system is
 $$\mathbf{K} =\frac{\partial \mathbf{r}}{\partial \mathbf{y}} = c_{\dot{\mathbf{y}}} \left( \mathbf{E} + \frac{\partial \mathbf{c}}{\partial
@@ -32,7 +32,8 @@ with time factors $c_{\dot{\mathbf{y}}}=\alpha_m$ and $c_{\mathbf{y}}=\alpha_f\g
 
 The implementation of the global governing equations is in the [SparseSystem class](https://simvascular.github.io/svZeroDSolver/class_sparse_system.html). 
 
-### Time integration
+<h3 id="time-integration">Time Integration</h3>
+<!--### Time integration-->
 
 <!--For unknown reasons, need to escape (\) underscores for SOME in-line eqns from here onwards. See below:-->
 <!--https://docs.mathjax.org/en/latest/input/tex/html.html#interactions-with-content-management-systems-->

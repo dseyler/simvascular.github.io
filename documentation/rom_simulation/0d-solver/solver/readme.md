@@ -16,15 +16,6 @@ interactively select nodes to view simulation results.
 drawing the network on an easy-to-use GUI. This provides an alternative to manually
 creating files and is useful for users without access to a 3D model.
 
-The main categories of blocks implemented in svZeroDSolver are:
-<ul>
-  <li>Blood vessels</li>
-  <li>Junctions</li>
-  <li>Boundary conditions</li>
-  <li>Heart chambers</li>
-  <li>Heart valves</li>
-</ul>
-
 ## Installation
 
 svZeroDSolver can be installed in two different ways. For using the Python API, an installation via pip is recommended.
@@ -66,6 +57,15 @@ cmake --build .
 ## Blocks
 
 The modular architecture of svZeroDSolver relies on "blocks", such as blood vessels, junctions, valves, boundary conditions, etc. Users can assemble and connect these blocks together in a variety of ways to create extensive and customizable 0D circulation models.   
+
+The main categories of blocks implemented in svZeroDSolver are:
+<ul>
+  <li>Blood vessels</li>
+  <li>Junctions</li>
+  <li>Boundary conditions</li>
+  <li>Heart chambers</li>
+  <li>Heart valves</li>
+</ul>
 
 An overview of all currently implemented blocks can be found [here](https://simvascular.github.io/svZeroDSolver/class_block.html). This collection of building blocks allows to model extensive and complex vascular networks. Many examples of vascular networks can be found [here](https://github.com/simvascular/svZeroDSolver/tree/master/tests/cases). The assembly of these blocks is specified in the `.json` configuration file. The user guide below provides details.
 
