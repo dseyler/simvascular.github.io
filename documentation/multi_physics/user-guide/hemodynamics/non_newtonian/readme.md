@@ -5,7 +5,7 @@ Blood is a complex mixture that consists of plasma, blood cells and platelets. T
 
 <h4> Viscosity models </h4>
 
-Currently, **svFSIplus** supports three viscosity models: Newtonian, Carreau-Yasuda and Casson <a href="#ref-2">[2]</a>.
+Currently, **svMultiPhysics** supports three viscosity models: Newtonian, Carreau-Yasuda and Casson <a href="#ref-2">[2]</a>.
 
 <figure>
   <img class="svImg svImgSm" src="/documentation/svfsi/fluid/imgs/non-newtonian.png" style="width:100%;height:auto;max-width: 30vw;">

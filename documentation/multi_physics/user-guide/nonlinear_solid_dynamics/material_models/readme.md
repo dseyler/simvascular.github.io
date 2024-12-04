@@ -1,6 +1,6 @@
 ### Material models
 
-Below is the list of available material constitutive models in **svFSIplus** :
+Below is the list of available material constitutive models in **svMultiPhysics** :
 
 <table class="table table-bordered">
   <caption>Volumetric constitutive models for the struct/ustruct equations</caption>
