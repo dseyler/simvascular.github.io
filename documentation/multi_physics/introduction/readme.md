@@ -2,9 +2,11 @@
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
 The svMultiPhysics documentation is in a <b>Beta phase of release</b>. 
 
-The contents of the documentation is not finalized and could change in the future.
+The contents of the documentation are not finalized and could change in the future.
 
 Some sections of the documentation are incomplete and are actively being updated.
+
+All User Guide sections are being updated. 
 </div>
 
 # Introduction 
