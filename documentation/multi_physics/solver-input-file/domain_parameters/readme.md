@@ -68,7 +68,7 @@ The following sections list the parameters associated with a domain for a specif
 <a href="#domain_Fluid_density"> Fluid_density <a>
 <a href="#domain_Solid_density"> Solid_density<a>
 <a href="#domain_Backflow_stabilization_coefficient"> Backflow_stabilization_coefficient <a>
-<a href="#domain_Poisson_ratioa"> Poisson_ratio <a>
+<a href="#domain_Poisson_ratio"> Poisson_ratio <a>
 <a href="#domain_Shell_thickness"> Shell_thickness <a>
 </pre>
 
@@ -77,7 +77,7 @@ The following sections list the parameters associated with a domain for a specif
 <h5 id="fluid_domain_parameters"> Fluid Domain Parameters </h5>
 <pre>
 <a href="#domain_Backflow_stabilization_coefficient"> Backflow_stabilization_coefficient <a>
-<a href="#domain_density"> Density <a>
+<a href="#domain_Density"> Density <a>
 <a href="#domain_Force_x"> Force_x <a>
 <a href="#domain_Force_y"> Force_y <a>
 <a href="#domain_Force_z"> Force_z <a>
@@ -201,7 +201,7 @@ The thermal or diffusive conductivity within a domain.
 </nobr><br>
 The stabilizing coefficient associated to the continuity equation in the Variational Multiscale Method.
 <br>
-<section id="domain_density">
+<section id="domain_Density">
 <strong>&lt;Density&gt;</strong> <i>real</i> [0.5] <nobr>
 <strong>&lt;/Density&gt;</strong>
 </nobr><br>
@@ -210,12 +210,12 @@ The density property for a solid or fluid.
 <strong>&lt;Dilational_penalty_model&gt;</strong> <i>string [none] </i> <nobr>
 <strong>&lt;/Dilational_penalty_mode&gt;</strong>
 </nobr><br>
-The dilational or volume-preserving component of the hyperelastic strain energy function.
+The dilational or volume-preserving component of the hyperelastic strain energy function. The <strong>Shell</strong> equation uses ST91 dilational penalty model only
 Permissible values are
 <ul style="list-style-type:disc;">
-  <li> Quadratic - </li>
-  <li> Simo-Taylor91 - </li>
-  <li> Miehe94 - </li>
+  <li> Quadratic </li>
+  <li> Simo-Taylor91 </li>
+  <li> Miehe94 </li>
 </ul>
 <br>
 <section id="domain_Elasticity_modulus">
