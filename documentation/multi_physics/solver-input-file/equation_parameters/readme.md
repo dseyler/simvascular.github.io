@@ -76,15 +76,16 @@ If <i>true</i> then the convergence of a multi-equation system of equations is c
 <strong>&lt;Initialize&gt;</strong> <i>string [none]</i> <nobr>
 <strong>&lt;/Initialize&gt;</strong>
 </nobr><br>
-Initialize the CMM equation. 
+Initialize the fluid wall for a CMM equation. 
    Permissible values are 
-   &middot;inflate -
-   &middot;prestress -
+   &middot;inflate - Initialize the fluid wall using displacements read in from a file given in the <a href="#bc_Initial_displacements_file_path"> Initial_displacements_file_path </a> parameter.
+   &middot;prestress - Initialize the fluid wall using traction values read in from a file given in the <a href="#bc_Prestress_file_path"> Prestress_file_path </a> parameter.
+
 <br>
 <strong>&lt;Initialize_RCR_from_flow&gt;</strong> <i>boolean [false]</i> <nobr>
 <strong>&lt;/Initialize_RCR_from_flow&gt;</strong>
 </nobr><br>
-If true then initialize RCR from flow data.
+If <i>true</i> then initialize RCR from flow data.
 <br>
 <strong>&lt;Max_iterations&gt;</strong> <i>integer</i> [1] <nobr>
 <strong>&lt;/Max_iterations&gt;</strong>
