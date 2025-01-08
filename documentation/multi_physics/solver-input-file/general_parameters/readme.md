@@ -106,7 +106,7 @@ Indicates how often to save restart files.
 Name of the file used to store simulation state data. This file is used for restarting simulations.
 <br>
 <section id="gen_Overwrite_restart_file">
-<strong>&lt;Overwrite_restart_file&gt;</strong> <i>bool</i> [<i>false</i>] <nobr>
+<strong>&lt;Overwrite_restart_file&gt;</strong> <i>boolean</i> [<i>false</i>] <nobr>
 <strong>&lt;/Overwrite_restart_file&gt;</strong>
 </nobr><br>
 If <i>true</i> then the simulation results restart file is overwritten.
