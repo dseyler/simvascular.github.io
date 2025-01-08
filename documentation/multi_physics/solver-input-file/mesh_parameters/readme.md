@@ -112,6 +112,11 @@ The mesh typically defines a network of Purkinje fibers used in cardiac electrop
 </nobr><br>
 If <i>true</i> then the mesh given in the <strong>Mesh_file_path</strong> keywork is treated as a mesh of shell elements. The mesh can then be used for solving the <strong>shell</strong> equation type. A shell mesh is also needed for initializing a <strong>CMM</strong> equation using a prestress or displacements.
 <br>
+<strong>&lt;quadrature_modifier_TET4&gt;</strong> <i>real</i> [0.5854] <nobr>
+<strong>&lt;/quadrature_modifier_TET4&gt;</strong>
+</nobr><br>
+The quadrature used for tetrahedral elements.
+<br>
 </div>
 
 <!-- ------------------------------------- -->
@@ -125,6 +130,12 @@ If <i>true</i> then the mesh given in the <strong>Mesh_file_path</strong> keywor
 <strong>&lt;/Face_file_path&gt;</strong>
 </nobr><br>
 The path to a VTK VTP file defining a finite element surface mesh for a face in the simulation.
+<br>
+<strong>&lt;Quadrature_modifier_TRI3&gt;</strong> <i>real</i> [0.6666] <nobr>
+<strong>&lt;/Quadrature_modifier_TRI3&gt;</strong>
+</nobr><br>
+The quadrature used for triangle elements.
+<br>
 <strong>&lt;/Add_face&gt;</strong>
 </div>
 

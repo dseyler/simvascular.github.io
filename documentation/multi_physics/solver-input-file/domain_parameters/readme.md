@@ -81,6 +81,7 @@ The following sections list the parameters associated with a domain for a specif
 <a href="#domain_Force_x"> Force_x <a>
 <a href="#domain_Force_y"> Force_y <a>
 <a href="#domain_Force_z"> Force_z <a>
+<a href="#domain_Inverse_darcy_permeability"> Inverse_darcy_permeability <a>
 </pre>
 
 <!-- ---------- fluid-solid-interactio domain Parameters ---------- -->
@@ -108,7 +109,7 @@ linear elasticity, structural or structural velocity pressure parameters.
 <a href="#domain_Poisson_ratio"> Poisson_ratio <a>
 </pre>
 
-<!-- ---------- shel domain Parameters ---------- -->
+<!-- ---------- shell domain Parameters ---------- -->
 
 <h5 id="shell_domain_parameters"> Shell Domain Parameters </h5>
 <pre>
@@ -290,6 +291,12 @@ The maximal rapid delayed rectifier sodium current used in the TenTusscher-Panfi
 <strong>&lt;/G_to&gt;</strong>
 </nobr><br>
 The maximal transient outward current conductance used in the TenTusscher-Panfilov Ventricular Myocyte Model.
+<br>
+<section id="domain_Inverse_darcy_permeability">
+<strong>&lt;Inverse_darcy_permeability&gt;</strong> <i>real</i> [0.0] <nobr>
+<strong>&lt;/Inverse_darcy_permeability&gt;</strong>
+</nobr><br>
+Sets the inverse darcy permeability constant.
 <br>
 <strong>&lt;Isotropic_conductivity&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Isotropic_conductivity&gt;</strong>

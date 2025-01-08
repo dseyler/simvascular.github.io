@@ -78,6 +78,17 @@ in a text file.
 </nobr><br>
 Load a file used to set the spatial and temporal values for a boundary condition. The file can be a VTK VTP-format file or a text file. 
 <br>
+<strong>&lt;CST_shell_bc_type&gt;</strong> <i>string</i> [<i>none</i>]  <nobr> 
+<strong>&lt;/CST_shell_bc_type&gt;</strong>
+</nobr><br>
+Constrain the degrees of freedom of a Constant Strain Triangle (CST) of a triangular shell element. 
+condition. Permissible values are:
+<ul style="list-style-type:disc;">
+  <li> fixed - Fix the edge </li>
+  <li> hinged - Allow rotation about an edge </li>
+  <li> free - Allow free motion about an edge </li>
+</ul>
+<strong>&lt;Impose_on_state_variable_integral&gt;</strong> <i>boolean</i> [<i>false</i>]  <nobr> 
 <strong>&lt;Impose_flux&gt;</strong> <i>boolean</i> [<i>false</i>]  <nobr> 
 <strong>&lt;/Impose_flux&gt;</strong>
 </nobr><br>
@@ -279,5 +290,10 @@ If <i>true</i> then when the Robin BC is applied along the normal direction the 
 <strong>&lt;/Damping&gt;</strong>
 </nobr><br>
 The damping constant for the spring-mass-damper force used to implement a Robin boundary condition.
+<br>
+<strong>&lt;Stiffness>&gt;</strong> <i>real [1.0]</i> <nobr> 
+<strong>&lt;/Stiffness&gt;</strong>
+</nobr><br>
+The stiffness constant for the spring-mass-damper force used to implement a Robin boundary condition.
 </div>
 
