@@ -19,7 +19,7 @@ The <strong>Precomputed_solution</strong> keyword is used to define the paramete
 
 <h3 id= "precomputed_solution_parameters"> Precomputed Solution Parameters </h3>
 <div class="bc_param_div">
-<strong>&lt;Use_precomputed_solution></strong> <i>bool</i> [<i>false</i>] <nobr>
+<strong>&lt;Use_precomputed_solution></strong> <i>boolean</i> [<i>false</i>] <nobr>
 <strong>&lt;/Use_precomputed_solution&gt;</strong>
 </nobr><br>
 If <i>true</i> then use a precomputed solution for a simulation.
