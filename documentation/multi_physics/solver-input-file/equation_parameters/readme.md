@@ -13,7 +13,7 @@ The <i>Equation Section</i> is organized as follows
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 1px solid #d0d0d0">
 &lt;<strong>Add_equation</strong> type=<i>equation_type</i>&gt;
 <br><br>
-[<a href="#equation_parameters"> Equation Parameters </a> ]
+[<a href="#equation_parameters_section"> Equation Parameters </a> ]
 <br> <br>
 
 &lt;<strong>Domain</strong> id=<i>domain_id</i>&gt;
@@ -21,6 +21,17 @@ The <i>Equation Section</i> is organized as follows
 [<a href="#domain_section"> Domain Subsection </a> ]
 <br>
 &lt;<strong>/Domain</strong>&gt;
+
+&lt;<strong>ECGLeads</strong>&gt;
+<br>
+[<a href="#ECGLeads_subsection"> ECG Leads Subsection </a> ]
+<br>
+&lt;<strong>/ECGLeads</strong>&gt;
+
+&lt;<strong>Variable_wall_properties</strong> mesh_name=<i>mesh_name</i>&gt;<br>
+[<a href="#Variable_wall_properties_subsection"> Variable wall properties Subsection </a> ]
+<br>
+&lt;<strong>Viscosity</strong>&gt;
 
 &lt;<strong>Viscosity</strong> model=<i>viscosity_model</i>&gt;<br>
 [<a href="#viscosity_parameters"> Viscosity Subsection </a> ]
@@ -66,7 +77,7 @@ The value of <i>equation_type</i> is a <i>string</i> identifying the equation ty
 <!-- ---------- Equation Parameters ---------- -->
 <!-- ----------------------------------------- -->
 
-<h3 id="equation_parameters"> Equation Parameters </h3>
+<h3 id="equation_parameters_section"> Equation Parameters </h3>
 <div class="bc_param_div">
 <strong>&lt;Coupled&gt;</strong> <i>boolean [true]</i> <nobr>
 <strong>&lt;/Coupled&gt;</strong>
@@ -76,15 +87,16 @@ If <i>true</i> then the convergence of a multi-equation system of equations is c
 <strong>&lt;Initialize&gt;</strong> <i>string [none]</i> <nobr>
 <strong>&lt;/Initialize&gt;</strong>
 </nobr><br>
-Initialize the CMM equation. 
+Initialize the fluid wall for a CMM equation. 
    Permissible values are 
-   &middot;inflate -
-   &middot;prestress -
+   &middot;inflate - Initialize the fluid wall using displacements read in from a file given in the <a href="#bc_Initial_displacements_file_path"> Initial_displacements_file_path </a> parameter.
+   &middot;prestress - Initialize the fluid wall using traction values read in from a file given in the <a href="#bc_Prestress_file_path"> Prestress_file_path </a> parameter.
+
 <br>
 <strong>&lt;Initialize_RCR_from_flow&gt;</strong> <i>boolean [false]</i> <nobr>
 <strong>&lt;/Initialize_RCR_from_flow&gt;</strong>
 </nobr><br>
-If true then initialize RCR from flow data.
+If <i>true</i> then initialize RCR from flow data.
 <br>
 <strong>&lt;Max_iterations&gt;</strong> <i>integer</i> [1] <nobr>
 <strong>&lt;/Max_iterations&gt;</strong>
@@ -112,6 +124,73 @@ The solution of a nonlinear system of equations is considered to be converged (s
 If <i>true</i> then use a Taylor-Hood element pair for increased stability.
 <br>
 </div>
+
+<!-- ============================================================== -->
+<!-- ====================== ECGLeads Subsection =================== -->
+<!-- ============================================================== -->
+<h4 id="ECGLeads_subsection"> ECG Leads Subsection </h4>
+The <i>ECG Leads Subsection</i> of the <i>Equation Section</i> or <i>Domain Subsection</i> contains 
+the parameters used to define ECG leads. 
+
+The <i>ECG Leads  Subsection</i> is organized as follows
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 1px solid #d0d0d0">
+&lt;<strong>ECGLeads</strong>&gt;
+<br><br>
+[ <a href="#ECGLeads_parameters"> ECG Leads Parameters </a> ]
+<br> <br>
+&lt;<strong>/ECGLeads</strong>&gt;
+</div>
+
+The <strong>ECGLeads</strong> keyword defines a subsection for ECG Leads parameters.
+
+<h5 id="ECGLeads_parameters"> ECG Leads Parameters</h5>
+<div class="bc_param_div">
+<strong>&lt;X_coords_file_path&gt;</strong> <i>string</i> [none] <nobr>
+<strong>&lt;/X_coords_file_path&gt;</strong>
+</nobr><br>
+The path to the text file containing the x-coordinates for the ECG leads. 
+<br>
+<strong>&lt;Y_coords_file_path&gt;</strong> <i>string</i> [none] <nobr>
+<strong>&lt;/Y_coords_file_path&gt;</strong>
+</nobr><br>
+The path to the text file containing the y-coordinates for the ECG leads. 
+<br>
+<strong>&lt;Z_coords_file_path&gt;</strong> <i>string</i> [none] <nobr>
+<strong>&lt;/Z_coords_file_path&gt;</strong>
+</nobr><br>
+The path to the text file containing the z-coordinates for the ECG leads. 
+<br>
+</div>
+
+
+<!-- ============================================================== -->
+<!-- =============== Variable wall properties Subsection ========= -->
+<!-- ============================================================== -->
+<h4 id="Variable_wall_properties_subsection"> Variable wall properties Subsection </h4>
+The <i>Variable wall properties Subsection</i> of the <i>Equation Section</i> or <i>Domain Subsection</i> defines
+the parameters used to define the node-based material properties used in a CMM equation.
+
+The <i>Variable wall properties Subsection</i> is organized as follows
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 1px solid #d0d0d0">
+&lt;<strong>Variable_wall_properties</strong> mesh_name=<i>mesh_name</i>&gt;
+<br><br>
+[ <a href="#Variable_wall_properties_parameters"> Variable wall properties Parameters </a> ]
+<br> <br>
+&lt;<strong>/Variable_wall_properties</strong>&gt;
+</div>
+
+The <strong>Variable_wall_properties</strong> keyword defines a subsection for variable wall properties parameters.
+The <i>mesh_name</i> attribute is the mesh name to assign the variable wall properties. 
+
+<h5 id="Variable_wall_properties_parameters"> Variable wall properties Parameters</h5>
+<div class="bc_param_div">
+<strong>&lt;Wall_properties_file_path&gt;</strong> <i>string</i> [none] <nobr>
+<strong>&lt;/Wall_properties_file_path&gt;</strong>
+</nobr><br>
+The path to the VTK VTP-format file used to set the node-wise elasticity modulus and shell thickness properties. 
+<br>
+</div>
+
 
 <!-- ============================================================== -->
 <!-- ==================== Viscosity Subsection ==================== -->

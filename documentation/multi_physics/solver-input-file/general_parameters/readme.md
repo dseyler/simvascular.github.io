@@ -37,6 +37,11 @@ The number of time steps to run the simulation.
 </nobr><br>
 The value use to increment the simulation time.
 <br>
+<strong>&lt;Starting_time_step&gt;</strong> <i>int</i> [0] <nobr>
+<strong>&lt;/Starting_time_step&gt;</strong>
+</nobr><br>
+The starting time step used for the simulation. 
+<br>
 <strong>&lt;Spectral_radius_of_infinite_time_step&gt;</strong> <i>real</i>  [0.5] <nobr>
 <strong>&lt;/Spectral_radius_of_infinite_time_step&gt;</strong>
 </nobr><br>
@@ -83,6 +88,11 @@ Save simulation results after the given time step.
 If <i>true</i> then compute time-averaged results from the entire simulation. The averaging is 
 performed after the last time step of the simulation using VTU files written during the simulation.
 <br>
+<strong>&lt;Start_averaging_from_zero&gt;</strong> <i>boolean [false]</i> <nobr>
+<strong>&lt;/Start_averaging_from_zero&gt;</strong>
+</nobr><br>
+If <i>true</i> then start everging results from time zero. 
+<br>
 <section id="gen_Increment_in_saving_restart_files">
 <strong>&lt;Increment_in_saving_restart_files&gt;</strong> <i>integer</i> [10] <nobr>
 <strong>&lt;/Increment_in_saving_restart_files&gt;</strong>
@@ -94,6 +104,12 @@ Indicates how often to save restart files.
 <strong>&lt;/Restart_file_name&gt;</strong>
 </nobr><br>
 Name of the file used to store simulation state data. This file is used for restarting simulations.
+<br>
+<section id="gen_Overwrite_restart_file">
+<strong>&lt;Overwrite_restart_file&gt;</strong> <i>boolean</i> [<i>false</i>] <nobr>
+<strong>&lt;/Overwrite_restart_file&gt;</strong>
+</nobr><br>
+If <i>true</i> then the simulation results restart file is overwritten.
 <br>
 <section id="general_params_Simulation_initialization_file_path">
 <strong>&lt;Simulation_initialization_file_path&gt;</strong> <i>string [none] </i> <nobr>

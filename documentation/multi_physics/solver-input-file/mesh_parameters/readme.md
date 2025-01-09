@@ -28,7 +28,9 @@ A <i>Mesh Section</i> is organized as follows
 &lt;<strong>Add_face</strong>&gt; 
 <br>
 
-[Mesh Parameters]
+<a href="#mesh_parameters">
+
+[<a href="#mesh_parameters"> Mesh Parameters </a> ]
 
 &lt;<strong>/Add_mesh</strong> &gt;
 </div>
@@ -73,40 +75,47 @@ The value used to scale mesh nodal coordinates.
 <strong>&lt;Initial_pressures_file_path&gt;</strong> <i>string [none] </i> <nobr>
 <strong>&lt;/Initial_pressures_file_path&gt;</strong>
 </nobr><br>
-The name of the file used to 
+The name of the VTK VTU file used to initialize simulation pressure values on a fluid domain. See <a href="#data_file_formats_initial_condition"> Initial Condition Data</a>.
 <br>
 <section id="mesh_params_Initial_velocities_file_path">
 <strong>&lt;Initial_velocities_file_path&gt;</strong> <i>string [none] </i> <nobr>
 <strong>&lt;/Initial_velocities_file_path&gt;</strong>
 </nobr><br>
-The name of the file used to 
+The name of the VTK VTU file used to initialize simulation velocity values on a fluid domain. See <a href="#data_file_formats_initial_condition"> Initial Condition Data</a>.
 <br>
 <section id="mesh_params_Initial_displacements_file_path">
 <strong>&lt;Initial_displacements_file_path&gt;</strong> <i>string [none] </i> <nobr>
 <strong>&lt;/Initial_displacements_file_path&gt;</strong>
 </nobr><br>
-The name of the file used to 
+The name of the VTK VTU file used to initialize simulation displacement values on a solid domain. See <a href="#data_file_formats_initial_condition"> Initial Condition Data</a>.
 <br>
+<section id="mesh_params_Prestress_file_path">
 <strong>&lt;Prestress_file_path&gt;</strong> <i>string [none] </i> <nobr>
 <strong>&lt;/Prestress_file_path&gt;</strong>
 </nobr><br>
-The name of the file used to 
+The name of the VTK VTU file used to initialize simulation stress values on a solid domain. See <a href="#data_file_formats_initial_condition"> Initial Condition Data</a>.
 <br>
 <section id="mesh_params_Fiber_direction_file_path">
 <strong>&lt;Fiber_direction_file_path&gt;</strong> <i>string [none] </i> <nobr>
 <strong>&lt;/Fiber_direction_file_path&gt;</strong>
 </nobr><br>
-The name of the file used to 
+The name of the VTK VTU file used to define the fiber directions for a solid domain. See <a href="#data_file_formats_fiber_direction"> Fiber and Sheet Direction Data</a>.
 <br>
 <strong>&lt;Set_mesh_as_fibers&gt;</strong> <i>boolean [false] </i> <nobr>
 <strong>&lt;/Set_mesh_as_fibers&gt;</strong>
 </nobr><br>
-The name of the file used to 
+If <i>true</i> then the mesh given in the <strong>Mesh_file_path</strong> keywork is treated as a mesh of one-dimensional elements in 3D.
+The mesh typically defines a network of Purkinje fibers used in cardiac electrophysiology simulations.
 <br>
 <strong>&lt;Set_mesh_as_shell&gt;</strong> <i>boolean [false] </i> <nobr>
 <strong>&lt;/Set_mesh_as_shell&gt;</strong>
 </nobr><br>
-The name of the file used to 
+If <i>true</i> then the mesh given in the <strong>Mesh_file_path</strong> keywork is treated as a mesh of shell elements. The mesh can then be used for solving the <strong>shell</strong> equation type. A shell mesh is also needed for initializing a <strong>CMM</strong> equation using a prestress or displacements.
+<br>
+<strong>&lt;quadrature_modifier_TET4&gt;</strong> <i>real</i> [0.5854] <nobr>
+<strong>&lt;/quadrature_modifier_TET4&gt;</strong>
+</nobr><br>
+The quadrature used for tetrahedral elements.
 <br>
 </div>
 
@@ -121,6 +130,12 @@ The name of the file used to
 <strong>&lt;/Face_file_path&gt;</strong>
 </nobr><br>
 The path to a VTK VTP file defining a finite element surface mesh for a face in the simulation.
+<br>
+<strong>&lt;Quadrature_modifier_TRI3&gt;</strong> <i>real</i> [0.6666] <nobr>
+<strong>&lt;/Quadrature_modifier_TRI3&gt;</strong>
+</nobr><br>
+The quadrature used for triangle elements.
+<br>
 <strong>&lt;/Add_face&gt;</strong>
 </div>
 

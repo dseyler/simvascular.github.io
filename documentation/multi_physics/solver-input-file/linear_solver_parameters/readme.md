@@ -82,22 +82,22 @@ The solution of a near system of equations is considered to be converged (solved
 <strong>&lt;NS_GM_max_iterations&gt;</strong> <i>integer</i> [5]  <nobr>
 <strong>&lt;/NS_GM_max_iterations&gt;</strong>
 </nobr><br>
-The solution of a near system of equations is considered to be converged (solved) if the linear residual is less than this value.
+The number of maximum iterations used to the control the convergence of the GMRES portion of the bi-partitioned iterative algorithm.
 <br>
 <strong>&lt;NS_GM_tolerance&gt;</strong> <i>real</i> [1e-10]  <nobr>
 <strong>&lt;/NS_GM_tolerance&gt;</strong>
 </nobr><br>
-? 
+The tolerance used to control the convergence of the GMRES portion of the bi-partitioned iterative algorithm. 
 <br>
 <strong>&lt;NS_CG_max_iterations&gt;</strong> <i>integer</i> [5]  <nobr>
 <strong>&lt;/NS_CG_max_iterations&gt;</strong>
 </nobr><br>
-? 
+The number of maximum iterations used to the control the convergence of the conjugate gradient portion of the bi-partitioned iterative algorithm.
 <br>
 <strong>&lt;NS_CG_tolerance&gt;</strong> <i>real</i> [1e-10]  <nobr>
 <strong>&lt;/NS_CG_tolerance&gt;</strong>
 </nobr><br>
-? 
+The tolerance used to the control the convergence of the conjugate gradient portion of the bi-partitioned iterative algorithm.
 <br>
 </div>
 

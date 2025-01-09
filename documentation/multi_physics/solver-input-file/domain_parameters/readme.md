@@ -18,7 +18,7 @@ The <i>Domain Subsection</i> is organized as follows
 &lt;<strong>Viscosity</strong>&gt;
 <br><br>
 &lt;<strong>Stimulus</strong> type=<i>stimulus_type</i>&gt;<br>
-[<a href="#stimulus_subsection"> Stimulus Subsection </a> ]
+[<a href="#domain_Stimulus_subsection"> Stimulus Subsection </a> ]
 <br>
 &lt;<strong>Stimulus</strong>&gt;
 <br><br>
@@ -56,7 +56,7 @@ The following sections list the parameters associated with a domain for a specif
 <a href="#domain_Electrophysiology_model"> Electrophysiology_model <a>
 <a href="#domain_Myocardial_zone"> Myocardial_zone <a>
 <a href="#domain_ODE_solver"> ODE_solver <a>
-<a href="#domain_Stimulus"> Stimulus <a>
+<a href="#domain_Stimulus_subsection"> Stimulus <a>
 <a href="#domain_Time_step_for_integration"> Time_step_for_integration <a>
 </pre>
 
@@ -68,7 +68,7 @@ The following sections list the parameters associated with a domain for a specif
 <a href="#domain_Fluid_density"> Fluid_density <a>
 <a href="#domain_Solid_density"> Solid_density<a>
 <a href="#domain_Backflow_stabilization_coefficient"> Backflow_stabilization_coefficient <a>
-<a href="#domain_Poisson_ratioa"> Poisson_ratio <a>
+<a href="#domain_Poisson_ratio"> Poisson_ratio <a>
 <a href="#domain_Shell_thickness"> Shell_thickness <a>
 </pre>
 
@@ -77,10 +77,11 @@ The following sections list the parameters associated with a domain for a specif
 <h5 id="fluid_domain_parameters"> Fluid Domain Parameters </h5>
 <pre>
 <a href="#domain_Backflow_stabilization_coefficient"> Backflow_stabilization_coefficient <a>
-<a href="#domain_density"> Density <a>
+<a href="#domain_Density"> Density <a>
 <a href="#domain_Force_x"> Force_x <a>
 <a href="#domain_Force_y"> Force_y <a>
 <a href="#domain_Force_z"> Force_z <a>
+<a href="#domain_Inverse_darcy_permeability"> Inverse_darcy_permeability <a>
 </pre>
 
 <!-- ---------- fluid-solid-interactio domain Parameters ---------- -->
@@ -108,7 +109,7 @@ linear elasticity, structural or structural velocity pressure parameters.
 <a href="#domain_Poisson_ratio"> Poisson_ratio <a>
 </pre>
 
-<!-- ---------- shel domain Parameters ---------- -->
+<!-- ---------- shell domain Parameters ---------- -->
 
 <h5 id="shell_domain_parameters"> Shell Domain Parameters </h5>
 <pre>
@@ -182,7 +183,7 @@ Convergence is deemed to occur when the size of the residual becomes sufficientl
 <strong>&lt;Anisotropic_conductivity&gt;</strong> <i>vector</i> <nobr>
 <strong>&lt;/Anisotropic_conductivity&gt;</strong>
 </nobr><br>
-Sets the anisotropic conductivity constant.
+The anisotropic conductivity constant used to model the directional dependence of conduction velocity in cardiac tissue.
 <br>
 <section id="domain_Backflow_stabilization_coefficient">
 <strong>&lt;Backflow_stabilization_coefficient&gt;</strong> <i>real</i> [0.2] <nobr>
@@ -190,17 +191,18 @@ Sets the anisotropic conductivity constant.
 </nobr><br>
 A parameter used to control flow reversal at outlet boundaries.
 <br>
+<section id="domain_Conductivity">
 <strong>&lt;Conductivity&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Conductivity&gt;</strong>
 </nobr><br>
-?
+The thermal or diffusive conductivity within a domain.
 <br>
 <strong>&lt;Continuity_stabilization_coefficient&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Continuity_stabilization_coefficient&gt;</strong>
 </nobr><br>
-?
+The stabilizing coefficient associated to the continuity equation in the Variational Multiscale Method.
 <br>
-<section id="domain_density">
+<section id="domain_Density">
 <strong>&lt;Density&gt;</strong> <i>real</i> [0.5] <nobr>
 <strong>&lt;/Density&gt;</strong>
 </nobr><br>
@@ -209,12 +211,12 @@ The density property for a solid or fluid.
 <strong>&lt;Dilational_penalty_model&gt;</strong> <i>string [none] </i> <nobr>
 <strong>&lt;/Dilational_penalty_mode&gt;</strong>
 </nobr><br>
-The dilational or volume-preserving component of the hyperelastic strain energy function.
+The dilational or volume-preserving component of the hyperelastic strain energy function. The <strong>Shell</strong> equation uses ST91 dilational penalty model only
 Permissible values are
 <ul style="list-style-type:disc;">
-  <li> Quadratic - </li>
-  <li> Simo-Taylor91 - </li>
-  <li> Miehe94 - </li>
+  <li> Quadratic </li>
+  <li> Simo-Taylor91 </li>
+  <li> Miehe94 </li>
 </ul>
 <br>
 <section id="domain_Elasticity_modulus">
@@ -239,7 +241,7 @@ Permissible values are
 <strong>&lt;Feedback_parameter_for_stretch_activated_currents&gt;</strong> <i>real</i> [0.5] <nobr>
 <strong>&lt;/Feedback_parameter_for_stretch_activated_currents&gt;</strong>
 </nobr><br>
-?
+The constant for stretch-activated currents (SACs) used in cardiac electrophysiology simulations.
 <br>
 <section id="domain_Fluid_density">
 <strong>&lt;Fluid_density&gt;</strong> <i>real</i> [0.5] <nobr>
@@ -251,44 +253,50 @@ The density property for a fluid.
 <strong>&lt;Force_x&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Force_x&gt;</strong>
 </nobr><br>
-?
+The x-component of a body force applied to a domain.
 <br>
 <section id="domain_Force_y">
 <strong>&lt;Force_y&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Force_y&gt;</strong>
 </nobr><br>
-?
+The y-component of a body force applied to a domain.
 <br>
 <section id="domain_Force_z">
 <strong>&lt;Force_z&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Force_z&gt;</strong>
 </nobr><br>
-?
+The z-component of a body force applied to a domain.
 <br>
 <strong>&lt;G_Na&gt;</strong> <i>real</i> [14.838] <nobr>
 <strong>&lt;/G_Na&gt;</strong>
 </nobr><br>
-?
+The maximal sodium conductance used in the TenTusscher-Panfilov Ventricular Myocyte Model.
 <br>
 <strong>&lt;G_CaL&gt;</strong> <i>real</i> [3.98E-5] <nobr>
 <strong>&lt;/G_CaL&gt;</strong>
 </nobr><br>
-?
+The maximal calcium conductance used in the TenTusscher-Panfilov Ventricular Myocyte Model.
 <br>
 <strong>&lt;G_Kr&gt;</strong> <i>real</i> [0.153] <nobr>
 <strong>&lt;/G_Kr&gt;</strong>
 </nobr><br>
-?
+The maximal rapid delayed rectifier potassium current used in the TenTusscher-Panfilov Ventricular Myocyte Model.
 <br>
 <strong>&lt;G_Ks&gt;</strong> <i>real</i> [0.392] <nobr>
 <strong>&lt;/G_Ks&gt;</strong>
 </nobr><br>
-?
+The maximal rapid delayed rectifier sodium current used in the TenTusscher-Panfilov Ventricular Myocyte Model.
 <br>
 <strong>&lt;G_to&gt;</strong> <i>real</i> [0.294] <nobr>
 <strong>&lt;/G_to&gt;</strong>
 </nobr><br>
-?
+The maximal transient outward current conductance used in the TenTusscher-Panfilov Ventricular Myocyte Model.
+<br>
+<section id="domain_Inverse_darcy_permeability">
+<strong>&lt;Inverse_darcy_permeability&gt;</strong> <i>real</i> [0.0] <nobr>
+<strong>&lt;/Inverse_darcy_permeability&gt;</strong>
+</nobr><br>
+Sets the inverse darcy permeability constant.
 <br>
 <strong>&lt;Isotropic_conductivity&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Isotropic_conductivity&gt;</strong>
@@ -298,13 +306,13 @@ Sets the isotropic conductivity constant.
 <strong>&lt;Mass_damping&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Mass_damping&gt;</strong>
 </nobr><br>
-?
+The mass damping coefficient used to dissipate energy.
 <br>
 <section id="domain_Momentum_stabilization_coefficient">
 <strong>&lt;Momentum_stabilization_coefficient&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Momentum_stabilization_coefficient&gt;</strong>
 </nobr><br>
-?
+The stabilizing coefficient associated to the momentum equation in the Variational Multiscale Method.
 <br>
 <section id="domain_Myocardial_zone">
 <strong>&lt;Myocardial_zone&gt;</strong> <i>string [none] </i> <nobr>
@@ -324,9 +332,9 @@ Permissible values are
 </nobr><br>
 The time integration method to solve the ODEs used to integrate activation models.
 <ul style="list-style-type:disc;">
-  <li> euler </li>
-  <li> implicit - </li>
-  <li> runge - </li>
+  <li> euler - first-order Euler method</li>
+  <li> implicit - second-order Crank–Nicolson method </li>
+  <li> runge - fourth-order Runge-Kutte method</li>
 </ul>
 <br>
 <strong>&lt;Penalty_parameter&gt;</strong> <i>real </i> [0.0] <nobr>
@@ -351,7 +359,7 @@ with the first error estimate calculated.
 <strong>&lt;Shell_thickness&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Shell_thickness&gt;</strong>
 </nobr><br>
-?
+The thickness of the shell elements in a domain.
 <br>
 <section id="domain_Solid_density">
 <strong>&lt;Solid_density&gt;</strong> <i>real</i> [0.5] <nobr>
@@ -359,20 +367,21 @@ with the first error estimate calculated.
 </nobr><br>
 The density property for a solid.
 <br>
+<section id="domain_Source_term">
 <strong>&lt;Source_term&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Source_term&gt;</strong>
 </nobr><br>
-?
+The volumetric source term (e.g. heat or dye) within a domain.
 <br>
 <strong>&lt;tau_fi&gt;</strong> <i>real</i> [0.110] <nobr>
 <strong>&lt;/tau_fi&gt;</strong>
 </nobr><br>
-?
+The fast inward current time scale used in the Bueno-Orovio cell activation model.
 <br>
 <strong>&lt;tau_si&gt;</strong> <i>real</i> [1.88750] <nobr>
 <strong>&lt;/tau_si&gt;</strong>
 </nobr><br>
-?
+The slow inward current time scale used in the Bueno-Orovio cell activation model.
 <br>
 <section id="domain_Time_step_for_integration">
 <strong>&lt;Time_step_for_integration&gt;</strong> <i>real</i> [0.0] <nobr>
@@ -386,7 +395,7 @@ The time step size used to integrate activation models if different from simulat
 <!-- ---------- Stimulus Subsection ----------- -->
 <!-- ------------------------------------------ -->
 
-<h4 id="stimulus_subsection"> Stimulus Subsection </h4>
+<h4 id="domain_Stimulus_subsection"> Stimulus Subsection </h4>
 The <i>Stimulus Subsection</i> of the <i>Domain Subsection</i> defines the stimulus
 settings for pacemaker cells for a cardiac electrophysiology simulation.
 
@@ -403,7 +412,7 @@ The <strong>Stimulus</strong> keyword adds stimulus settings to the enclosing do
 <i>stimulus_type</i> attribute can be
 
 <ul style="list-style-type:disc;">
-  <li> "Istim" - </li>
+  <li> "Istim" - the applied stimulus is a source current and not a voltage source </li>
 </ul>
 
 <h5 id="stimulus_parameters"> Parameters </h5>
@@ -411,21 +420,21 @@ The <strong>Stimulus</strong> keyword adds stimulus settings to the enclosing do
 <strong>&lt;Amplitude&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Amplitude&gt;</strong>
 </nobr><br>
-?
+The stimulus amplitude.
 <br>
 <strong>&lt;Cycle_length&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Cycle_length&gt;</strong>
 </nobr><br>
-?
+The stimulus cycle length. 
 <br>
 <strong>&lt;Duration&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Duration&gt;</strong>
 </nobr><br>
-?
+The stimulus duration. 
 <br>
 <strong>&lt;Start_time&gt;</strong> <i>real</i> [0.0] <nobr>
 <strong>&lt;/Start_time&gt;</strong>
 </nobr><br>
-?
+The stimulus start time.
 <br>
 </div>

@@ -20,7 +20,7 @@ There are two types of tag
 An XML element is everything from (including) the element's start tag to (including) the element's end tag. 
 
 <pre>
-&lt;Tolerance> 0.001 &lt;/Tolerance>;
+&lt;Tolerance> 0.001 &lt;/Tolerance>
 </pre>
 
 There are three types of elements
