@@ -2,6 +2,11 @@
 <hr class="rounded">
 
 <h1 id="sv_fsi_tool" style="text-align:center;"> SimVascular FSI Tool </h1>
+
+<div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
+The SimVascular FSI Tool does not yet support writing svMultiPhysics solver XML files.
+</div>
+
 The SimVascular <strong>SV FSI Tool</strong> is used to interactively create the mesh and solver XML input files
 needed to run an svMultiPhysics simulation.
 
